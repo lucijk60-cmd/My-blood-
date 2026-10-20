@@ -1,0 +1,14 @@
+<!doctype html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blood Alert</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head><body>
+<header><h1>🩸 Blood Alert</h1><p>রক্ত দিন, জীবন বাঁচান</p></header><main>
+<section class="card"><h2>📍 আপনার অবস্থান</h2><p id="locationStatus">লোকেশন চালু করে কাছাকাছি অনুরোধ দেখুন।</p><button id="locationBtn">আমার লোকেশন খুঁজুন</button><div id="map"></div></section>
+<section class="card"><h2>🩸 রক্তের অনুরোধ করুন</h2><form id="bloodForm">
+<label>রোগীর নাম<input id="patient" required maxlength="80"></label>
+<label>মোবাইল নম্বর (দেশের কোডসহ)<input id="phone" type="tel" placeholder="+9665XXXXXXXX" required></label>
+<label>রক্তের গ্রুপ<select id="group" required><option value="">নির্বাচন করুন</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label>
+<label>রক্তের ব্যাগ<input id="units" type="number" min="1" max="20" value="1" required></label>
+<label>হাসপাতালের নাম<input id="hospital" required maxlength="150"></label>
+<label>জরুরিতা<select id="urgency"><option>অতি জরুরি</option><option selected>জরুরি</option><option>সাধারণ</option></select></label>
+<label>অতিরিক্ত তথ্য<textarea id="details" maxlength="500"></textarea></label><button type="submit">অনুরোধ প্রকাশ করুন</button></form>
+<p class="note">এটি প্রোটোটাইপ: অনুরোধ শুধু বর্তমান সেশনে থাকে। অনলাইনে ডেটা শেয়ার করতে Firebase integration প্রয়োজন।</p></section>
+<section class="card"><h2>🩸 ৩০ কিমির মধ্যে অনুরোধ</h2><div id="requestList">প্রথমে লোকেশন চালু করুন।</div></section></main><footer>Blood Alert • জরুরি অবস্থায় স্থানীয় জরুরি সেবার সাহায্য নিন</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="app.js"></script></body></html>
